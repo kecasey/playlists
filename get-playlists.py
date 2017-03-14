@@ -30,7 +30,7 @@ if len(sys.argv) > 1:
                     if not track:
                         lib_track = [item for item in my_library if item.get('id') in i.get('trackId')]
                         track = lib_track[0]
-                    f.write(str(count+1)+","+track['artist']+","+track['album']+","+track['title']+"\n")
+                    f.write(str(count+1)+"|"+track['artist']+"|"+track['album']+"|"+track['title']+"\n")
                     count+=1
                 f.close()            
                     
