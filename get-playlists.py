@@ -3,7 +3,7 @@ from gmusicapi import Mobileclient
 from datetime import date
 import fileinput
 
-lists_to_get = ['Party Mix','Rap','Blues','Ivy music']
+lists_to_get = ['Party Mix','Rap','Blues','Ivy Music','K Pop','Classical']
 
 if len(sys.argv) > 1:
     pw = ""
