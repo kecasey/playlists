@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 import csv
 
@@ -10,11 +12,17 @@ if len(sys.argv)==3:
             right = [row for row in rightreader]
             only_left = []
             only_right = []
+            left_wo = []
+            right_wo = []
             for row in left:
-                if row not in right:
+                left_wo.append(row[1:])
+            for row in right:
+                right_wo.append(row[1:])
+            for row in left:
+                if row[1:] not in right_wo:
                     only_left.append(row)
             for row in right:
-                if row not in left:
+                if row[1:] not in left_wo:
                     only_right.append(row)
                     
             count = 0
