@@ -6,8 +6,12 @@ import fileinput
 lists_to_get = ['Party Mix','Rap','Blues','Ivy Music','K Pop','Classical']
 
 if len(sys.argv) > 1:
+
+    if len(sys.argv) > 2:
+        lists_to_get = [sys.argv[2]]
+
     pw = ""
-    for line in fileinput.input():
+    for line in fileinput.input(files=sys.argv[1]):
         pw = line
 
     api = Mobileclient()
