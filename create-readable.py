@@ -1,7 +1,7 @@
 import sys
 import csv
 
-if len(sys.argv) > 1:
+if len(sys.argv) >1:
     for inputfile in sys.argv[1:]:
         
         with open(inputfile) as inf:
